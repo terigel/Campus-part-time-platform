@@ -1,0 +1,34 @@
+@CHARSET "UTF-8";
+*{
+	margin:0px;
+	padding:0px;
+}
+h1{
+	color:red;
+	font-size:25px;
+	letter-spacing:8px;
+	margin:20px auto;
+	margin-top:100px;
+	text-align:center;	
+	
+}
+.bj{
+	width:100%;
+	height:438px;
+	background:rgb(56,156,232);
+	margin:0px auto;
+	position:relative;
+}
+.bj .bj-b{background:url(../image/dljm.jpg);width:838px;height:438px;float:left;}
+form{
+	font-size:13px;	
+	position:absolute;
+	left:800px;
+	top:120px;
+}
+form p{
+	height:40px;
+}
+form .anniu{
+	text-align:center;	
+}

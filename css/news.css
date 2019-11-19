@@ -1,0 +1,8 @@
+@CHARSET "UTF-8";
+body{font-size:14px;}
+h3{text-align:center;}
+#news{border:1px solid red;width:60%;margin:0 auto;margin-top:20px;}
+#news label{font-weight:bold;}
+#news input[name='news_title']{width:350px;}
+#news .btn{text-align:center;}
+#news span{color:red;font-size:12px;font-weight:bold;}
