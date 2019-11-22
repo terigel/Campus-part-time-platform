@@ -192,7 +192,7 @@
            </div>
        <div class="menu">
               <a href="index.html">首页</a>
-             <a href="a.html">发布兼职</a>
+             <a href="add_jz.php">发布兼职</a>
              <a href="b.html">求职投递</a>
              <a href="news_article.php">校园新闻</a>
              <a href="">服务帮助</a>
@@ -232,43 +232,55 @@
              </div>            
         </div>
         <div class="right">
-              <div class="submenu"><a href="index.html">首页</a> -> <a href="">发布兼职基本信息</a></div>
+              <div class="submenu"><a href="index.php">首页</a> -> <a href="">发布兼职基本信息</a></div>
               <div class="content">
-                  	<form class="form-horizontal" style="margin-top: 20px;">
+                  	<form action="jz_cl.php?act=insert_jz" class="form-horizontal" method="post" style="margin-top: 20px;">
 					  <div class="form-group">
-					    <label for="title" class="col-sm-2 control-label">单位名称</label>
+					    <label for="jz_name" class="col-sm-2 control-label">兼职名称</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="title" placeholder="单位名称">
+					      <input type="text" class="form-control" id="jz_name" name="jz_name" placeholder="兼职名称">
 					    </div>
 					  </div>
 					  <div class="form-group">
-					    <label for="name" class="col-sm-2 control-label">单位地点</label>
+					    <label for="unit_name" class="col-sm-2 control-label">单位名称</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="name" placeholder="单位地点">
+					      <input type="text" class="form-control" id="unit_name" name="unit_name" placeholder="单位名称">
 					    </div>
 					  </div>
 					  <div class="form-group">
-					    <label for="phoneNum" class="col-sm-2 control-label">兼职种类</label>
+					    <label for="unit_address" class="col-sm-2 control-label">单位地点</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="phoneNum" placeholder="兼职种类">
+					      <input type="text" class="form-control" id="unit_address" name="unit_address" placeholder="单位地点">
 					    </div>
 					  </div>
 					  <div class="form-group">
-					    <label for="QQ" class="col-sm-2 control-label">兼职时间</label>
+					    <label for="jz_class" class="col-sm-2 control-label">兼职种类</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="QQ" placeholder="兼职时间">
+					      <input type="text" class="form-control" id="jz_class" name="jz_class" placeholder="兼职种类">
 					    </div>
 					  </div>
 					  <div class="form-group">
-					    <label for="email" class="col-sm-2 control-label">兼职工资</label>
+					    <label for="jz_time" class="col-sm-2 control-label">兼职时间</label>
 					    <div class="col-sm-10">
-					      <input type="email" class="form-control" id="email" placeholder="兼职工资">
+					      <input type="text" class="form-control" id="jz_time" name="jz_time" placeholder="兼职时间">
 					    </div>
 					  </div>
 					  <div class="form-group">
-					    <label for="context" class="col-sm-2 control-label">备注要求</label>
+					    <label for="jz_wages" class="col-sm-2 control-label">兼职工资</label>
 					    <div class="col-sm-10">
-					      <textarea class="form-control" rows="3"></textarea>
+					      <input type="text" class="form-control" id="jz_wages" name="jz_wages" placeholder="兼职工资">
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="unit_phone" class="col-sm-2 control-label">联系方式</label>
+					    <div class="col-sm-10">
+					      <input type="text" class="form-control" id="unit_phone" name="unit_phone" placeholder="联系方式">
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="jz_remarks" class="col-sm-2 control-label">备注要求</label>
+					    <div class="col-sm-10">
+					      <textarea class="form-control" name="jz_remarks" rows="3"></textarea>
 					    </div>
 					  </div>
 					  <div class="form-group">

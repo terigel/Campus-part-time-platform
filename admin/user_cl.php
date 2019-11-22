@@ -8,9 +8,9 @@ switch($act){
 		$user_name=mysql_escape_string($_POST['user_name']);
 		$user_email=mysql_escape_string($_POST['user_email']);
 		$user_psw=md5(mysql_escape_string($_POST['password']));
-		$pass=mysql_escape_string($_POST['pass']);
+		$type=mysql_escape_string($_POST['type']);
 		$salt=md5(uniqid(microtime()));
-		$stmt=add_user($link,$user_name,$user_psw,$user_email,$salt,$pass);
+		$stmt=add_user($link,$user_name,$user_psw,$user_email,$salt,$type);
 		if(mysqli_stmt_affected_rows($stmt)>0){
 			echo"<script>alert('用户信息添加成功！');location.href='user_list.php';</script>";
 		}
@@ -32,28 +32,28 @@ switch($act){
 		break;
 	case "passU":
 		$id=$_GET['id'];
-		$sql="update user_table set pass=1 where id=?";
+		$sql="update user_table set type=1 where id=?";
 		$stmt=mysqli_stmt_init($link);
 		mysqli_stmt_prepare($stmt,$sql);
 		mysqli_stmt_bind_param($stmt,'s',$id);
 		mysqli_stmt_execute($stmt);
 		if(mysqli_stmt_affected_rows($stmt)>0){
-			echo"<script>alert('用户认证成功！');location.href='user_pass.php';</script>";
+			echo"<script>alert('更改为公司对象成功！');location.href='user_pass.php';</script>";
 		}else{
-			echo"<script>alert('用户认证失败！');location.href='user_pass.php';</script>";
+			echo"<script>alert('更改为公司对象失败！');location.href='user_pass.php';</script>";
 		}
 		break;
 	case "passD":
 		$id=$_GET['id'];
-		$sql="update user_table set pass=0 where id=?";
+		$sql="update user_table set type=0 where id=?";
 		$stmt=mysqli_stmt_init($link);
 		mysqli_stmt_prepare($stmt,$sql);
 		mysqli_stmt_bind_param($stmt,'s',$id);
 		mysqli_stmt_execute($stmt);
 		if(mysqli_stmt_affected_rows($stmt)>0){
-			echo"<script>alert('用户取消认证成功！');location.href='user_pass.php';</script>";
+			echo"<script>alert('更改为个人对象成功！');location.href='user_pass.php';</script>";
 		}else{
-			echo"<script>alert('用户取消认证失败！');location.href='user_pass.php';</script>";
+			echo"<script>alert('更改为个人对象失败！');location.href='user_pass.php';</script>";
 		}
 		break;
 	case "mode":

@@ -17,14 +17,14 @@
 			<label>认证信息：</label>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="pass" id="pass1" value="1">
-			    已认证
+			    <input type="radio" name="type" id="pass1" value="1">
+			    公司
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="pass" id="pass2" value="0" checked>
-			    未认证
+			    <input type="radio" name="type" id="pass2" value="0" checked>
+			    个人
 			  </label>
 			</div>
 			<p class="btn"><input type="submit" value="提　交"></input>&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="重　填"></input></p>
